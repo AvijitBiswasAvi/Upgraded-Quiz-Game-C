@@ -5,5 +5,9 @@
 int main() {
     
     printf("|================================|\n");
+    printf("|    WELCOME TO THE QUIZ GAME    |\n");
+    printf("|--------------------------------|\n");
+    printf("| 1. Start the game              |\n");
+    
     return 0;
 }
