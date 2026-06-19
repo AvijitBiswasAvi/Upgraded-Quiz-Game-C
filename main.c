@@ -13,7 +13,8 @@ int main() {
     printf("| 1. Start the game              |\n");
     printf("| 2. Rules                       |\n");
     printf("|================================|\n");
-    printf("\nEnter your choice = ");
+    printf("\nEnter your choice = ");  
+    
 
     return 0;
 }
