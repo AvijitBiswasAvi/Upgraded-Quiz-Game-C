@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef struct quizgame
+{
+    char questions[200];
+    char options[100];
+    char answers[50]; 
+} Quiz;
 
 int main() {
     
@@ -17,8 +23,9 @@ int main() {
     printf("\nEnter your choice = ");  
     scanf("%d", &starting_choice);
 
-    if (starting_choice = 1)
-    {
+    if (starting_choice == 1)
+    {   
+        printf("\n");
         printf("|=============================|\n");
         printf("|      CHOOSE DIFICULTY       |\n");
         printf("|-----------------------------|\n");
@@ -26,6 +33,12 @@ int main() {
         printf("| 2. Medium ( 10 Questions )  |\n");
         printf("| 3. Hard ( 15 Questions )    |\n");
         printf("|=============================|\n");
+
+        int dificulty_choice;
+        printf("\nEnter your choice = ");
+        scanf("%d", &dificulty_choice);
+
+
     }
     
     
