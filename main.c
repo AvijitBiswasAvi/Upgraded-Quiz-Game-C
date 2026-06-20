@@ -63,7 +63,7 @@ int main()
             strcpy(game[4].answers, "C");
         }
 
-       else if (dificulty_choice == 2)
+        else if (dificulty_choice == 2)
         {
             int max_questions = 10;
             Quiz game[10];
@@ -89,7 +89,6 @@ int main()
             strcpy(game[7].options, "A) Football  B) Tennis  C) Cricket  D) Basketball");
             strcpy(game[8].options, "A) Won  B) Yuan  C) Yen  D) Ringgit");
             strcpy(game[9].options, "A) Shukaku  B) Kurama  C) Gyuki  D) Matatabi");
-            
 
             strcpy(game[0].answers, "D");
             strcpy(game[1].answers, "B");
@@ -103,7 +102,7 @@ int main()
             strcpy(game[9].answers, "B");
         }
 
-       else if (dificulty_choice == 3)
+        else if (dificulty_choice == 3)
         {
             int max_questions = 15;
             Quiz game[15];
@@ -156,10 +155,11 @@ int main()
             strcpy(game[13].answers, "A");
             strcpy(game[14].answers, "C");
         }
-        
+
         else
         {
             printf("\n--- Invalid choice ! Defaulting to Easy mode ---\n");
+            
             int max_questions = 5;
             Quiz game[5];
 
