@@ -194,7 +194,7 @@ int main()
 
             user_answer = toupper(user_answer);
 
-            if (user_answer == game[i].answers[i])
+            if (user_answer == game[i].answers[0])
             {
                 correct_ans++;
             }
