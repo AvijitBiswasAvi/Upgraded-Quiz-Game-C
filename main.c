@@ -189,12 +189,12 @@ int main()
             printf("\n%s\n", game[i].questions);
             printf("%s\n", game[i].options);
 
-            printf("Enter your answer : ");
-            scanf("%c", &user_answer);
+            printf("\nEnter your answer : ");
+            scanf(" %c", &user_answer);
 
             user_answer = toupper(user_answer);
 
-            if (user_answer == game[i].answers)
+            if (user_answer == game[i].answers[i])
             {
                 correct_ans++;
             }
@@ -203,7 +203,8 @@ int main()
                 wrong_ans++;
             }
         }
-    }
+    }   
+    
 
     return 0;
 }
