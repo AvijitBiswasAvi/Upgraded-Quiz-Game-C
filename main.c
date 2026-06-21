@@ -5,7 +5,7 @@
 typedef struct upgradedquizgame
 {
     char questions[200];
-    char options[100];
+    char options[150];
     char answers[50];
 } Quiz;
 
@@ -13,22 +13,21 @@ int main()
 {
 
     int starting_choice;
-
-    printf("\n");
-    printf("|================================|\n");
-    printf("|    WELCOME TO THE QUIZ GAME    |\n");
-    printf("|--------------------------------|\n");
-    printf("| 1. Start the game              |\n");
-    printf("| 2. Rules                       |\n");
-    printf("|================================|\n");
-
-    printf("\nEnter your choice = ");
-    scanf("%d", &starting_choice);
-
-    char choice_of_reply;
-
+    char choice_of_reply = 'Y';
     do
     {
+
+        printf("\n");
+        printf("|================================|\n");
+        printf("|    WELCOME TO THE QUIZ GAME    |\n");
+        printf("|--------------------------------|\n");
+        printf("| 1. Start the game              |\n");
+        printf("| 2. Rules                       |\n");
+        printf("|================================|\n");
+
+        printf("\nEnter your choice = ");
+        scanf("%d", &starting_choice);
+
         if (starting_choice == 1)
         {
             printf("\n");
@@ -246,33 +245,38 @@ int main()
             printf("\nPlay Again? (Y/N) : ");
             scanf(" %c", &choice_of_reply);
         }
+
+        if (starting_choice == 2)
+        {
+            printf("\n");
+            printf("=========================================\n");
+            printf("              QUIZ RULES\n");
+            printf("=========================================\n");
+            printf("1. Choose a difficulty level before\n");
+            printf("   starting the quiz.\n");
+            printf("2. Available difficulty levels are:\n");
+            printf("   Easy, Medium, and Hard.\n");
+            printf("3. Each question has four options:\n");
+            printf("   A, B, C, and D.\n");
+            printf("4. Enter your answer using A, B, C,\n");
+            printf("   or D.\n");
+            printf("5. Both uppercase and lowercase\n");
+            printf("   answers are accepted.\n");
+            printf("6. Each correct answer awards 1 point.\n");
+            printf("7. Wrong answers do not deduct points.\n");
+            printf("8. Your final score, percentage, and\n");
+            printf("   grade will be displayed at the end.\n");
+            printf("9. Try to score as high as possible!\n");
+            printf("=========================================\n");
+        }
+
+        if (starting_choice != 1 && starting_choice != 2)
+        {
+            printf("\n----! ERROR , INVALID CHOICE !----\n");
+            printf("\n");
+        }
     } while (choice_of_reply == 'y' || choice_of_reply == 'Y');
     printf("\n----! THANK YOU FOR PLAYING !----\n");
     printf("\n");
-
-    if (starting_choice == 2)
-    {
-        printf("\n");
-        printf("=========================================\n");
-        printf("              QUIZ RULES\n");
-        printf("=========================================\n");
-        printf("1. Choose a difficulty level before\n");
-        printf("   starting the quiz.\n");
-        printf("2. Available difficulty levels are:\n");
-        printf("   Easy, Medium, and Hard.\n");
-        printf("3. Each question has four options:\n");
-        printf("   A, B, C, and D.\n");
-        printf("4. Enter your answer using A, B, C,\n");
-        printf("   or D.\n");
-        printf("5. Both uppercase and lowercase\n");
-        printf("   answers are accepted.\n");
-        printf("6. Each correct answer awards 1 point.\n");
-        printf("7. Wrong answers do not deduct points.\n");
-        printf("8. Your final score, percentage, and\n");
-        printf("   grade will be displayed at the end.\n");
-        printf("9. Try to score as high as possible!\n");
-        printf("=========================================\n");
-    }
-
     return 0;
 }
