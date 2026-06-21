@@ -39,13 +39,16 @@ int main()
         int dificulty_choice;
         printf("\nEnter your choice = ");
         scanf("%d", &dificulty_choice);
-        
+
         Quiz game[15];
         int max_questions;
+        char user_answer;
+        int correct_ans = 0;
+        int wrong_ans = 0;
+
         if (dificulty_choice == 1)
         {
             max_questions = 5;
-            Quiz game[5];
 
             strcpy(game[0].questions, "Which planet is known as the Red Planet?");
             strcpy(game[1].questions, "How many continents are there on Earth?");
@@ -69,7 +72,6 @@ int main()
         else if (dificulty_choice == 2)
         {
             max_questions = 10;
-            Quiz game[10];
 
             strcpy(game[0].questions, "What is the capital city of Australia?");
             strcpy(game[1].questions, "Which web series features a chemistry teacher who becomes a drug lord?");
@@ -108,7 +110,6 @@ int main()
         else if (dificulty_choice == 3)
         {
             max_questions = 15;
-            Quiz game[15];
 
             strcpy(game[0].questions, "Which country was the first to give women the right to vote?");
             strcpy(game[1].questions, "What is the term for the interest rate at which central banks lend money to commercial banks?");
@@ -162,9 +163,8 @@ int main()
         else
         {
             printf("\n--- Invalid choice ! Defaulting to Easy mode ---\n");
-            
+
             max_questions = 5;
-            Quiz game[5];
 
             strcpy(game[0].questions, "Which planet is known as the Red Planet?");
             strcpy(game[1].questions, "How many continents are there on Earth?");
@@ -185,17 +185,24 @@ int main()
             strcpy(game[4].answers, "C");
         }
         for (int i = 0; i < max_questions; i++)
-        {   
+        {
             printf("\n%s\n", game[i].questions);
             printf("%s\n", game[i].options);
 
-            char user_answer;
-            user_answer = toupper(user_answer);
-            
             printf("Enter your answer : ");
             scanf("%c", &user_answer);
+
+            user_answer = toupper(user_answer);
+
+            if (user_answer == game[i].answers)
+            {
+                correct_ans++;
+            }
+            else
+            {
+                wrong_ans++;
+            }
         }
-        
     }
 
     return 0;
