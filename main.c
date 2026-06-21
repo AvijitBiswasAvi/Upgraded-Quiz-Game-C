@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 typedef struct upgradedquizgame
 {
@@ -38,10 +39,12 @@ int main()
         int dificulty_choice;
         printf("\nEnter your choice = ");
         scanf("%d", &dificulty_choice);
-
+        
+        Quiz game[15];
+        int max_questions;
         if (dificulty_choice == 1)
         {
-            int max_questions = 5;
+            max_questions = 5;
             Quiz game[5];
 
             strcpy(game[0].questions, "Which planet is known as the Red Planet?");
@@ -65,7 +68,7 @@ int main()
 
         else if (dificulty_choice == 2)
         {
-            int max_questions = 10;
+            max_questions = 10;
             Quiz game[10];
 
             strcpy(game[0].questions, "What is the capital city of Australia?");
@@ -104,7 +107,7 @@ int main()
 
         else if (dificulty_choice == 3)
         {
-            int max_questions = 15;
+            max_questions = 15;
             Quiz game[15];
 
             strcpy(game[0].questions, "Which country was the first to give women the right to vote?");
@@ -160,7 +163,7 @@ int main()
         {
             printf("\n--- Invalid choice ! Defaulting to Easy mode ---\n");
             
-            int max_questions = 5;
+            max_questions = 5;
             Quiz game[5];
 
             strcpy(game[0].questions, "Which planet is known as the Red Planet?");
@@ -181,6 +184,16 @@ int main()
             strcpy(game[3].answers, "C");
             strcpy(game[4].answers, "C");
         }
+        for (int i = 0; i < max_questions; i++)
+        {   
+            printf("\n%s\n", game[i].questions);
+            printf("%s\n", game[i].options);
+
+            char user_answer;
+            printf("Enter your answer : ");
+            scanf("%c", &user_answer);
+        }
+        
     }
 
     return 0;
