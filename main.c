@@ -236,7 +236,7 @@ int main()
             printf("         QUIZ RESULT         \n");
             printf("-----------------------------\n");
             printf("Score          : %d/%d\n", correct_ans, max_questions);
-            printf("Correst Answer : %d\n", correct_ans);
+            printf("Correct Answer : %d\n", correct_ans);
             printf("Wrong Answer   : %d\n", wrong_ans);
             printf("Percentage     : %d%%\n", score);
             printf("Grade          : %c\n", grade);
