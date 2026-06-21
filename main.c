@@ -190,6 +190,8 @@ int main()
             printf("%s\n", game[i].options);
 
             char user_answer;
+            user_answer = toupper(user_answer);
+            
             printf("Enter your answer : ");
             scanf("%c", &user_answer);
         }
