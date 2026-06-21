@@ -250,6 +250,29 @@ int main()
     printf("\n----! THANK YOU FOR PLAYING !----\n");
     printf("\n");
 
-    
+    if (starting_choice == 2)
+    {
+        printf("\n");
+        printf("=========================================\n");
+        printf("              QUIZ RULES\n");
+        printf("=========================================\n");
+        printf("1. Choose a difficulty level before\n");
+        printf("   starting the quiz.\n");
+        printf("2. Available difficulty levels are:\n");
+        printf("   Easy, Medium, and Hard.\n");
+        printf("3. Each question has four options:\n");
+        printf("   A, B, C, and D.\n");
+        printf("4. Enter your answer using A, B, C,\n");
+        printf("   or D.\n");
+        printf("5. Both uppercase and lowercase\n");
+        printf("   answers are accepted.\n");
+        printf("6. Each correct answer awards 1 point.\n");
+        printf("7. Wrong answers do not deduct points.\n");
+        printf("8. Your final score, percentage, and\n");
+        printf("   grade will be displayed at the end.\n");
+        printf("9. Try to score as high as possible!\n");
+        printf("=========================================\n");
+    }
+
     return 0;
 }
