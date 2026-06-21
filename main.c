@@ -29,16 +29,16 @@ int main()
     {
         printf("\n");
         printf("|=============================|\n");
-        printf("|      CHOOSE DIFICULTY       |\n");
+        printf("|      CHOOSE DIFFICULTY      |\n");
         printf("|-----------------------------|\n");
         printf("| 1. Easy ( 5 Questions )     |\n");
         printf("| 2. Medium ( 10 Questions )  |\n");
         printf("| 3. Hard ( 15 Questions )    |\n");
         printf("|=============================|\n");
 
-        int dificulty_choice;
+        int difficulty_choice;
         printf("\nEnter your choice = ");
-        scanf("%d", &dificulty_choice);
+        scanf("%d", &difficulty_choice);
 
         Quiz game[15];
         int max_questions;
@@ -46,7 +46,7 @@ int main()
         int correct_ans = 0;
         int wrong_ans = 0;
 
-        if (dificulty_choice == 1)
+        if (difficulty_choice == 1)
         {
             max_questions = 5;
 
@@ -69,7 +69,7 @@ int main()
             strcpy(game[4].answers, "C");
         }
 
-        else if (dificulty_choice == 2)
+        else if (difficulty_choice == 2)
         {
             max_questions = 10;
 
@@ -107,7 +107,7 @@ int main()
             strcpy(game[9].answers, "B");
         }
 
-        else if (dificulty_choice == 3)
+        else if (difficulty_choice == 3)
         {
             max_questions = 15;
 
@@ -227,6 +227,18 @@ int main()
         {
             grade = 'F';
         }
+        
+        printf("\n");
+        printf("=============================\n");
+        printf("         QUIZ RESULT         \n");
+        printf("-----------------------------\n");
+        printf("Score          : %d/%d\n", correct_ans, max_questions);
+        printf("Correst Answer : %d\n", correct_ans);
+        printf("Wrong Answer   : %d\n", wrong_ans);
+        printf("Percentage     : %d%%\n", score);
+        printf("Grade          : %c\n", grade);
+        printf("=============================\n");
+        
         
     }   
 
